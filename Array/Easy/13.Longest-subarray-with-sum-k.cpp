@@ -36,30 +36,6 @@ int brutee2(int n,int key, vector<int>& arr){
 }
 
 
-int Optmial_for_postive_negative_zeros(int n,int key, vector<int>& arr){
-    map<long long, int> mp;
-    long long sum=0;
-    int maxLen=0;
-
-    for(int i=0; i<n; i++){
-        sum += arr[i];
-        if(sum == key){
-            maxLen = max(maxLen, i+1);
-        }
-        long long rem = sum -key;
-        if(mp.find(rem) != mp.end()){
-            int len = i - mp[rem];
-            maxLen = max(maxLen, len);
-        }
-        if(mp.find(sum) == mp.end()){
-            mp[sum]=i;
-        }
-    }
-    return maxLen;
-
-}
-
-
 int optimal_positives_zeros(int n, int key, vector<int>& arr){
 
     int left=0; int right=0;
@@ -92,5 +68,5 @@ int main(){
     for(int i=0; i<n; i++){
         cin>>arr[i];
     }
-    cout<<optimal(n,key,arr);
+    cout<<optimal_positives_zeros(n,key,arr);
 }
