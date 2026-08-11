@@ -36,7 +36,7 @@ int main(){
         cin>>arr[i];
     }
 
-    int k=Brutee(n,arr);          // this gives different arra
+    int k=Brutee(n,arr);          // this gives different array
     for(int i=0; i<k; i++){
         cout<<arr[i]<<" ";
     } 
