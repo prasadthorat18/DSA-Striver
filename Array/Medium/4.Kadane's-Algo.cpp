@@ -4,10 +4,10 @@ using namespace std;
 
 int Find_max_sum_Brutee(int n, vector<int>& arr){
 
-    int maxi=0;
+    long long maxi=LONG_MIN;
     for(int i=0; i<n; i++){
         for(int j=i; j<n; j++){
-            int sum=0;
+            long long sum=0;
             for(int k=i; k<=j; k++){
                 sum=sum+arr[k];
             }
@@ -20,9 +20,9 @@ int Find_max_sum_Brutee(int n, vector<int>& arr){
 
 int Find_max_sum_Better(int n, vector<int>& arr){
 
-    int maxi=0;
+    long long maxi=LONG_MIN;
     for(int i=0; i<n; i++){
-        int sum=0;
+        long long sum=0;
         for(int j=i; j<n; j++){
             sum=sum+arr[j];
 
