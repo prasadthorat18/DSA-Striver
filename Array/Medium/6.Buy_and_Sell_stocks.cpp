@@ -17,6 +17,23 @@ int brutee(int n, vector<int>& arr){
     return maxi;
 }
 
+int optimal(int n, vector<int>& arr){
+    
+    int profit=0;
+    int maxi=0;
+    int mini=arr[0];
+
+    for(int i=1; i<n; i++){
+
+        profit = arr[i] - mini;
+        
+        maxi= max(maxi, profit);
+
+        mini= min(mini, arr[i]);
+    }
+    return maxi;
+}
+
 int main(){
     int n;
     cin>>n;
@@ -26,5 +43,6 @@ int main(){
         cin>>arr[i];
     }
 
-    cout<<brutee(n, arr);
+    cout<<brutee(n, arr)<<endl;
+    cout<<optimal(n, arr);
 }
