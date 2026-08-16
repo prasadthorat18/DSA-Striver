@@ -16,15 +16,10 @@ vector<int> brutee(int n, vector<int>& arr){
         }
     }
     
-    int j=0; 
-    for(int i=0; i<n; i=i+2){
-        arr[i]=Ptemp[j];
-        j++;
-    }
-    int k=0; 
-    for(int i=1; i<n; i=i+2){
-        arr[i]=Ntemp[k];
-        k++;
+    
+    for(int i=0; i<n/2; i++){
+        arr[2 *i]=Ptemp[i];
+        arr[2 *i + 1]=Ntemp[i];
     }
     return arr;
 }
