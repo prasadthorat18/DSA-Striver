@@ -115,7 +115,7 @@ void Optimal(vector<vector<int>>& arr){
         }
     }
     if(col0 == 0){
-        for(int i=0; i<m; i++){
+        for(int i=0; i<n; i++){
             arr[i][0] = 0;
         }
     }
