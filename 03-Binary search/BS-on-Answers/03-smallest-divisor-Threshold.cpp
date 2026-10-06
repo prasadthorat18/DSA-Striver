@@ -25,7 +25,7 @@ int smallestDivisor(vector<int> &arr, int n, int threshold) {
     }
     return -1;
 }
-int divisor_BS(int mid, vector<int> &arr, int n, int threshold){
+int divisor_BS(int mid, vector<int> &arr, int n){
 
     
     int sum =0;
@@ -41,14 +41,14 @@ int smallestDivisor_BS(vector<int> &arr, int n, int threshold){
 
     int low = 1;
     int high = maxi;
-    
+
     int ans = 0;
 
     while( low <= high){
         int mid = (low + high) / 2;
 
         
-        if(divisor_BS(mid, arr, n, threshold) <= threshold){
+        if(divisor_BS(mid, arr, n) <= threshold){
             ans = mid ;
             high = mid - 1;
         }
